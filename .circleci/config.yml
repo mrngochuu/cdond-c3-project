@@ -24,9 +24,8 @@ commands:
     description: Revert the last migration if successfully run in the current workflow.
     parameters:
       # Add parameter here
-      run_when:
+      workflow_id:
         type: string
-        default: on_fail
     steps:
       - run:
           name: Revert migrations
@@ -37,8 +36,7 @@ commands:
             if(( $SUCCESS==1 )); 
             then
               cd ~/project/backend
-              npm install
-              Add revert code here. You can find this in the Getting Started section.
+              npm run migrations:revert
             fi
             
 jobs:
