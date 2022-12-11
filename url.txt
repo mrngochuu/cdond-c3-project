@@ -1,4 +1,0 @@
-[URL01]
-https://github.com/mrngochuu/cdond-c3-project
-[URL02]
-https://udapeople-94c8b9e.s3.amazonaws.com/index.html#/employees
