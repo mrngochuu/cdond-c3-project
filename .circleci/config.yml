@@ -35,9 +35,13 @@ commands:
             SUCCESS=$(curl --insecure  https://kvdb.io/DWvemXSUZC4PtGuacRTrHo/migration_${CIRCLE_WORKFLOW_ID:0:7})
             if(( $SUCCESS==1 )); 
             then
+            echo "--- revert start 01 ----"
             cd ~/project/backend
+            echo "--- revert start 02----"
             npm install
+            echo "--- revert start 03----"
             npm run migrations:revert
+            echo "--- revert start 04----"
             fi
             
 jobs:
